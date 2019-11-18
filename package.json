@@ -1,0 +1,15 @@
+{
+  "name": "tetrijs",
+  "version": "1.0.0",
+  "description": "Canvas-based Tetris game",
+  "main": "tetris.js",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "tetris",
+    "canvas"
+  ],
+  "author": "Philip Gannon / FiddlyDigital"
+}

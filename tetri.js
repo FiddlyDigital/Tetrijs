@@ -17,31 +17,30 @@ class Tetrijs {
   }
 
   addKeyBindings() {
-    document.addEventListener('keydown', event => {
-      if (event.keyCode === 37) {
-        //left
-        //playerMove(-1);
-        this.player.move(-1);
-      }
-      if (event.keyCode === 39) {
-        //right
-        //playerMove(1);
-        this.player.move(1);
-      }
-      if (event.keyCode === 40) {
-        //down
-        //playerDrop();
-        this.player.drop();
-      }
-      if (event.keyCode == 81) {
-        // q
-        //playerRotate(-1);
-        this.player.rotate(-1);
-      }
-      if (event.keyCode == 87) {
-        // 1
-        //playerRotate(1);
-        this.player.rotate(1)
+    document.addEventListener('keydown', e => {
+      switch (e.keyCode) {
+        case 38: // Up
+        case 87: // W
+          this.player.move(-1);
+            break;
+        case 40: // Down
+        case 83: // S
+          this.player.drop();
+            break;
+        case 37: // Turn Left
+        case 65: // A
+          this.player.move(-1);
+            break;
+        case 39: // Right
+        case 68: // D
+          this.player.move(1);
+            break;
+        case 81: // Q
+          this.player.rotate(-1);
+          break;
+        case 87: // E
+          this.player.rotate(1)
+          break;
       }
     });
   }
